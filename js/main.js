@@ -139,23 +139,11 @@ document.querySelectorAll('a[href="#page-end"]').forEach((link) => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
     const root = document.scrollingElement || document.documentElement;
-    const previousScrollBehavior = root.style.scrollBehavior;
-    const snapToPageEnd = () => {
-      root.style.scrollBehavior = 'auto';
-      root.scrollTop = root.scrollHeight;
-      requestAnimationFrame(() => {
-        root.style.scrollBehavior = previousScrollBehavior;
-      });
-    };
 
     history.replaceState(null, '', '#page-end');
-    snapToPageEnd();
-
-    document.querySelectorAll('img').forEach((image) => {
-      if (image.complete) return;
-      image.addEventListener('load', snapToPageEnd, { once: true });
+    window.scrollTo({
+      top: root.scrollHeight - window.innerHeight,
+      behavior: 'smooth'
     });
-
-    window.setTimeout(snapToPageEnd, 500);
   });
 });
