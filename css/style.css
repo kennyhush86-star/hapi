@@ -1,0 +1,149 @@
+:root{
+  --black:#050505;
+  --white:#f7f7f2;
+  --red:#ff002b;
+  --grey:#969696;
+  --line:#222;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--white);font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.changa{font-family:'Changa One',sans-serif;font-weight:400}
+.mono{font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.12em}
+
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(#fff 0.7px,transparent .7px);background-size:7px 7px;mix-blend-mode:screen;z-index:10}
+
+.site{min-height:100vh;position:relative}
+.topbar{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 32px));height:62px;background:var(--white);color:#090909;border-radius:999px;display:flex;align-items:center;justify-content:space-between;padding:8px 14px 8px 22px;z-index:50;box-shadow:0 18px 60px rgba(0,0,0,.35)}
+.logo{display:flex;align-items:center}
+.logo img{display:block;width:auto;height:46px}
+.nav{display:flex;gap:26px;align-items:center;font-family:'Lilita One',sans-serif}
+.nav a{font-size:18px;font-weight:400}
+.nav a:hover{opacity:.6}
+.nav-cta{background:#090909;color:var(--white);padding:12px 18px;border-radius:999px}
+
+.hero{min-height:100vh;min-height:100svh;padding:105px 28px 42px;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;overflow:hidden}
+.hero-copy{text-align:center;max-width:1100px;position:relative;z-index:3}
+.eyebrow{font-size:12px;color:var(--white);margin-bottom:22px}
+.hero h1{font-size:clamp(40px,6.4vw,90px);line-height:.88;margin:0;text-transform:uppercase}
+.hero h1 span{display:block}
+.hero h1 .corrected-line{white-space:nowrap}
+.word-correction{position:relative;color:var(--white);text-decoration:none;display:inline-block}
+.word-correction:after{content:"";position:absolute;left:-3%;right:-3%;top:52%;height:.08em;background:var(--red);transform:rotate(-4deg)}
+.fire-accent{color:var(--red);font-style:normal}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:36px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border:1px solid #3a3a3a;border-radius:999px;font-family:'Lilita One',sans-serif;font-weight:400;font-size:18px}
+.btn.primary{background:var(--white);border-color:var(--white);color:var(--black)}
+.btn:hover{transform:translateY(-2px)}
+
+.hero-art{width:min(860px,100%);min-height:330px;margin-top:8px;position:relative;display:grid;place-items:center}
+.hero-img{position:relative;z-index:2;width:min(350px,68vw);height:auto;display:block;filter:drop-shadow(0 38px 55px rgba(0,0,0,.85));transform:translateY(10px)}
+
+.section{padding:130px 6vw;position:relative;overflow:hidden}
+#why{scroll-margin-top:10px}
+.question-heading{font-size:clamp(40px,6.4vw,90px);line-height:.85;margin:0;text-align:center;text-transform:uppercase}
+.section-copy{max-width:680px;margin:32px auto 0;color:var(--white);font-size:17px;line-height:34px;text-align:center}
+.section-copy p{margin:0}
+.section-copy p+p{margin-top:0}
+.box-reveal-copy{margin-top:76px;font-family:'Lilita One',sans-serif;font-size:22px}
+.interactive-box{position:relative;display:block;width:min(620px,76vw);margin:48px auto 0;padding:0;border:0;background:none;cursor:pointer;transform:translateY(36px);transition:transform .8s cubic-bezier(.22,1,.36,1)}
+.interactive-box.is-positioned{transform:translateY(0)}
+.interactive-box:focus-visible{outline:3px solid var(--red);outline-offset:8px}
+.what-product{display:block;width:100%;height:auto}
+.box-flaps{position:absolute;inset:0;display:block;width:100%;height:auto;opacity:0;pointer-events:none}
+.interactive-box[aria-expanded="true"] .box-flaps{opacity:1}
+
+.product-stage{padding:80px 6vw 120px;background:var(--white);color:var(--black);position:relative}
+#product{scroll-margin-top:60px}
+.question-content{width:100%;display:flex;flex-direction:column;align-items:center;text-align:center}
+.product-stage .section-copy{max-width:1000px;margin-top:48px;color:var(--black);font-family:'Lilita One',sans-serif;font-size:22px}
+.product-stage .section-copy p:first-child{white-space:nowrap}
+.feature-list{margin:48px 0 0;padding:0;list-style:none;color:var(--red);font-family:'Changa One',sans-serif;font-size:64px;line-height:1;text-transform:uppercase}
+.feature-list li{white-space:nowrap}
+.feature-list.is-reveal-ready li{opacity:0;transform:translateY(40px) scale(.72) rotate(-2deg);transform-origin:center;transition:opacity .25s ease,transform .7s cubic-bezier(.16,1.35,.3,1)}
+.feature-list.is-reveal-ready li:nth-child(even){transform:translateY(40px) scale(.72) rotate(2deg)}
+.feature-list.is-reveal-ready li.is-visible{opacity:1;transform:translateY(0)}
+.feature-followup{margin:48px 0 0;font-family:'Lilita One',sans-serif;font-size:22px;line-height:34px}
+.feature-list.is-reveal-ready + .feature-followup{opacity:0;transform:translateY(20px);transition:opacity .3s ease,transform .55s cubic-bezier(.16,1,.3,1)}
+.feature-list.is-reveal-complete + .feature-followup{opacity:1;transform:translateY(0)}
+
+.manifesto{min-height:calc(100svh - 60px);padding:80px 6vw 120px;background:var(--black);color:var(--white);display:flex;flex-direction:column;align-items:center;text-align:center}
+.where-copy{max-width:1100px;margin-top:48px;font-family:'Lilita One',sans-serif;font-size:22px;line-height:34px}
+.where-copy p{white-space:nowrap}
+.where-family{display:block;width:min(700px,72vw);height:auto;margin:64px auto 0}
+#story{scroll-margin-top:60px}
+
+.site-footer{padding:48px 6vw 34px;background:var(--white);color:var(--black);font-family:'Lilita One',sans-serif;scroll-margin-top:94px}
+.footer-layout{width:min(1120px,100%);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:72px}
+.footer-main{display:flex;align-items:flex-start;flex-direction:column;gap:22px}
+.footer-logo{display:inline-flex;align-items:center}
+.footer-logo img{display:block;width:auto;height:64px}
+.footer-address{font-style:normal;font-size:18px;line-height:1.55;text-align:left}
+.footer-meta{font-size:16px}
+.footer-meta p{margin:0}
+.footer-contact{min-width:190px}
+.footer-contact h2{margin:0 0 18px;font-family:'Changa One',sans-serif;font-size:18px;font-weight:400;line-height:1}
+.footer-contact h3{margin:30px 0 16px;font-size:18px;font-weight:400;line-height:1}
+.footer-icons{display:flex;align-items:center;gap:18px}
+.footer-icon{display:inline-grid;width:34px;height:34px;place-items:center}
+.footer-icon img{display:block;width:30px;height:30px;object-fit:contain}
+.footer-icon[href]:hover{opacity:.55}
+.footer-icon[href]:focus-visible{outline:3px solid var(--red);outline-offset:5px}
+
+@media (max-width:780px){
+  .nav a:not(.nav-cta){display:none}
+  .topbar{height:56px}
+  .hero{padding:90px 20px 34px}
+  .hero h1{font-size:11vw}
+  .hero h1 .corrected-line{font-size:.82em}
+  .hero-art{min-height:285px;margin-top:4px}
+  .hero-img{width:min(270px,74vw);transform:translateY(-4px)}
+  .btn{padding:12px 18px;font-size:18px}
+  .section{padding:95px 7vw}
+  #why{scroll-margin-top:51px}
+  .question-heading{font-size:8vw}
+  .section-copy{margin-left:0}
+  .interactive-box{width:min(500px,82vw);margin-top:48px}
+  .box-reveal-copy{font-size:20px}
+  .product-stage{padding:70px 7vw 95px}
+  #product{scroll-margin-top:76px}
+  .feature-list{font-size:44px}
+  .product-stage .section-copy{font-size:20px}
+  .product-stage .section-copy p:first-child{white-space:normal}
+  .feature-followup{font-size:20px}
+  .where-copy{margin-inline:auto;font-size:20px}
+  .where-copy p{white-space:normal}
+  .where-family{width:min(560px,88vw);margin-top:54px}
+  .manifesto{min-height:calc(100svh - 76px);padding:70px 7vw 95px}
+  #story{scroll-margin-top:76px}
+  .site-footer{padding:40px 7vw 30px;scroll-margin-top:84px}
+  .footer-layout{grid-template-columns:1fr;gap:44px}
+  .footer-main{align-items:flex-start;flex-direction:column;gap:22px}
+  .footer-logo img{height:56px}
+  .footer-address{font-size:17px;text-align:left}
+  .footer-meta{font-size:15px}
+  .footer-contact{min-width:0}
+  .footer-contact h2,.footer-contact h3{font-size:17px}
+}
+
+@media (max-width:420px){
+  .topbar{top:12px;width:calc(100% - 20px);padding-left:16px}
+  .logo img{height:40px}
+  .nav-cta{padding:11px 16px}
+  .hero{padding-inline:16px}
+  #why{scroll-margin-top:41px}
+  .product-stage{padding:60px 7vw 80px}
+  .feature-list{font-size:34px}
+  .manifesto{min-height:calc(100svh - 76px);padding:60px 7vw 80px}
+  .footer-address{font-size:15px}
+  .footer-contact h2,.footer-contact h3{font-size:15px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .interactive-box{transition:none}
+  .feature-list.is-reveal-ready li{opacity:1;transform:none;transition:none}
+}
