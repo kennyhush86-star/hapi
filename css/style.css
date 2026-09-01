@@ -1,5 +1,5 @@
 :root{
-  --black:#050505;
+  --black:#000;
   --white:#f7f7f2;
   --red:#ff002b;
   --grey:#969696;
@@ -13,8 +13,6 @@ a{color:inherit;text-decoration:none}
 button{font:inherit}
 .changa{font-family:'Changa One',sans-serif;font-weight:400}
 .mono{font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.12em}
-
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(#fff 0.7px,transparent .7px);background-size:7px 7px;mix-blend-mode:screen;z-index:10}
 
 .site{min-height:100vh;position:relative}
 .topbar{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 32px));height:62px;background:var(--white);color:#090909;border-radius:999px;display:flex;align-items:center;justify-content:space-between;padding:8px 14px 8px 22px;z-index:50;box-shadow:0 18px 60px rgba(0,0,0,.35)}

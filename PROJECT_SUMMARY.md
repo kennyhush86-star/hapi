@@ -12,7 +12,8 @@ Current visual direction:
 - Lilita One at regular weight for navigation, buttons, and section descriptions
 - Inter as the base fallback/body font
 - Hapi mascot and product packaging remain the main visual assets
-- No gradients, floating hero animation, decorative icons, or card-heavy layout
+- No color gradients, floating hero animation, decorative icons, or card-heavy layout
+- The background is pure black (`#000`) with no dotted texture or pattern
 
 ## File Structure
 
@@ -25,11 +26,16 @@ Hapi Website/
 |   `-- main.js
 |-- public/
 |   `-- images/
+|       |-- facebook.svg
+|       |-- favicon.png
 |       |-- flaps.png
 |       |-- hapi_family.svg
 |       |-- hero.svg
+|       |-- instagram.svg
 |       |-- logo.svg
-|       `-- product.png
+|       |-- product.png
+|       `-- whatsapp.svg
+|-- .gitignore
 `-- PROJECT_SUMMARY.md
 ```
 
@@ -37,7 +43,9 @@ Hapi Website/
 
 - Logo links to `#top` and scrolls to the hero without refreshing the page.
 - Menu links: `About`, `Contact`, and `Buy Now`.
-- About anchors to WHAT?, Contact anchors to WHERE?, and Buy Now anchors to the footer.
+- About anchors to WHAT?.
+- Contact smoothly scrolls to the absolute bottom of the footer in one click.
+- Buy Now anchors to the footer.
 - The fixed white pill header uses Lilita One at regular weight.
 - Below `780px`, About and Contact are hidden while Buy Now remains visible.
 
@@ -46,7 +54,7 @@ Hapi Website/
 - Headline: `OUR CHARCOAL / LOVED BY US FIRE`
 - `US` is crossed out with a red correction line.
 - `FIRE` is red.
-- CTA: `What the?!`
+- CTA: `What's This?`
 - Main artwork: `public/images/hero.svg`
 - The CTA anchors to the WHAT? section.
 
@@ -97,7 +105,7 @@ very well without our charcoal. Know where to get it?
 - Description:
 
 ```text
-In Kuching, Sarawak, we make the boring black stuff that goes under the grill.
+We make the boring black stuff that goes under the grill in Kuching, Sarawak.
 You make all the delicious stuff on top. Teamwork. Need some?
 Get it from selected supermarkets, minimarts, hardware stores, Shopee and Grab.
 ```
@@ -119,6 +127,7 @@ Jalan Sungai Maong Tengah,
 
 - Copyright: `© 2026 Hapi`.
 - The address and copyright sit below the logo in one left-aligned column.
+- The right column contains a WhatsApp link to `+60122924104` and Facebook/Instagram icons.
 
 ## Typography And Spacing
 
@@ -152,6 +161,27 @@ Jalan Sungai Maong Tengah,
 - WHERE? family artwork: `public/images/hapi_family.svg`
 - Closed product box: `public/images/product.png`
 - Open box flaps overlay: `public/images/flaps.png`
+- Browser favicon: `public/images/favicon.png`
+
+## Repository And Deployment
+
+- GitHub repository: `https://github.com/kennyhush86-star/hapi`
+- Branch: `main`
+- Live Cloudflare Pages site: `https://hapi.pages.dev`
+- Latest deployed commit: `b1c5e5b Smooth scroll to contact footer`
+- The obsolete `hapi-charcoal` Cloudflare project was deleted.
+- Cloudflare currently uses direct upload; local changes do not deploy automatically.
+
+## Latest GitHub Update
+
+The latest source update includes:
+
+- Added `public/images/favicon.png` as the browser favicon.
+- Changed the browser title to `Hapi Charcoal Briquettes`.
+- Changed the hero CTA to `What's This?`.
+- Removed the dotted black-background texture and changed the main background to pure black.
+
+These changes still require a separate Cloudflare direct upload before they appear on the live site.
 
 ## Current Limitations / Next Steps
 
