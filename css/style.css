@@ -94,13 +94,14 @@ button{font:inherit}
 
 @media (max-width:780px){
   .topbar{height:56px}
+  .logo img{height:40px}
   .nav{gap:14px}
   .nav a{font-size:17px}
   .hero{min-height:100svh;padding:140px 20px 34px;justify-content:flex-start}
   .hero h1{font-size:11vw}
   .actions{margin-top:44px}
   .hero-art{min-height:285px;margin-top:4px}
-  .hero-img{width:min(305px,84vw);transform:translateY(44px)}
+  .hero-img{width:min(305px,84vw);transform:translateY(54px)}
   .btn{padding:12px 18px;font-size:18px}
   .section{padding:95px 7vw}
   #why{scroll-margin-top:51px}
@@ -122,7 +123,7 @@ button{font:inherit}
   .site-footer{padding:40px 7vw 30px;scroll-margin-top:84px}
   .footer-layout{grid-template-columns:1fr;gap:44px}
   .footer-main{align-items:flex-start;flex-direction:column;gap:22px}
-  .footer-logo img{height:56px}
+  .footer-logo img{height:48px}
   .footer-address{font-size:17px;text-align:left}
   .footer-meta{font-size:15px}
   .footer-contact{min-width:0;align-self:auto;gap:28px;justify-content:flex-start;order:-1}
@@ -131,7 +132,7 @@ button{font:inherit}
 
 @media (max-width:420px){
   .topbar{top:12px;width:calc(100% - 20px);padding:8px 12px 8px 16px}
-  .logo img{height:40px}
+  .logo img{height:36px}
   .nav{gap:11px}
   .nav a{font-size:16px}
   .nav-cta{padding:11px 16px}
