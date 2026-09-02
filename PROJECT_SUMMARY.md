@@ -11,7 +11,7 @@ Hapi is a responsive charcoal briquette website for a young, playful, premium BB
 - Changa One for display headlines and feature statements
 - Lilita One for navigation, buttons, descriptions, and footer copy
 - Hapi mascot and packaging artwork remain the main visual assets
-- No gradients, dotted background, floating hero animation, or card-heavy layout
+- No gradients, dotted background, floating motion, or card-heavy layout
 
 ## Structure
 
@@ -28,6 +28,9 @@ Hapi Website/
 |   `-- main.js
 |-- public/images/
 |   |-- hero.svg
+|   |-- animate/
+|   |   |-- 1.png ... 10.png
+|   |   `-- 1.webp ... 10.webp
 |   |-- logo.svg
 |   |-- product.png
 |   |-- product-680.webp
@@ -62,7 +65,12 @@ Hapi Website/
 - Headline: `OUR CHARCOAL / LOVED BY US FIRE`
 - `US` is crossed out and `FIRE` uses Hapi red
 - `What's This?` scrolls to the WHAT? section
-- Main artwork: `public/images/hero.svg`
+- Main artwork uses 10 numbered frames from `public/images/animate/`
+- Optimized `900x900` WebP frames are displayed instead of loading the larger source PNGs
+- Frames play in numerical order at about 7 FPS and loop while the hero is visible
+- Playback pauses when the hero is off-screen or the browser tab is hidden
+- Visitors who prefer reduced motion see the first frame as a static image
+- The original `public/images/hero.svg` remains in the asset folder
 
 ### WHAT?
 
@@ -130,6 +138,7 @@ because our charcoal is:
 
 - Added explicit image dimensions to reduce layout shifts
 - Added high-priority hero loading
+- Added an optimized, visibility-aware frame-by-frame hero animation
 - Added responsive lossless WebP packaging images
 - Added meta description, canonical URL, Open Graph metadata, and theme color
 - Added a valid `robots.txt` and `sitemap.xml`
@@ -158,7 +167,7 @@ The final build was tested at `320px`, `390px`, `768px`, and `1440px`.
 
 - Content and metadata: `index.html`
 - Layout, typography, colors, and responsive rules: `css/style.css`
-- Box, feature reveal, and bottom-scroll behavior: `js/main.js`
+- Hero animation, box reveal, feature reveal, and bottom-scroll behavior: `js/main.js`
 - Visual assets: `public/images/`
 
 ## Repository And Deployment
@@ -168,6 +177,7 @@ The final build was tested at `320px`, `390px`, `768px`, and `1440px`.
 - Live site: `https://hapi.pages.dev`
 - Cloudflare Pages project: `hapi`
 - Deployment uses Wrangler direct upload; pushing to GitHub alone does not update Cloudflare
+- The new hero frame animation is currently local and has not yet been pushed or deployed
 
 ## Pending Links
 

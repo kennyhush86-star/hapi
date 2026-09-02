@@ -1,3 +1,73 @@
+const heroFrame = document.querySelector('[data-frame-animation]');
+
+if (heroFrame && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const frameCount = Number(heroFrame.dataset.frameCount) || 1;
+  const frameSources = Array.from(
+    { length: frameCount },
+    (_, index) => `public/images/animate/${index + 1}.webp`
+  );
+  const frameDuration = 140;
+  let frames = [frameSources[0]];
+  let frameIndex = 0;
+  let lastFrameTime = 0;
+  let animationFrameId = 0;
+  let isVisible = true;
+  let isReady = false;
+
+  const stopAnimation = () => {
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = 0;
+  };
+
+  const animate = (time) => {
+    if (!isVisible || document.hidden) {
+      stopAnimation();
+      return;
+    }
+
+    if (time - lastFrameTime >= frameDuration) {
+      frameIndex = (frameIndex + 1) % frames.length;
+      heroFrame.src = frames[frameIndex];
+      lastFrameTime = time;
+    }
+
+    animationFrameId = requestAnimationFrame(animate);
+  };
+
+  const startAnimation = () => {
+    if (!isReady || !isVisible || document.hidden || animationFrameId) return;
+
+    lastFrameTime = performance.now();
+    animationFrameId = requestAnimationFrame(animate);
+  };
+
+  Promise.all(frameSources.map((source) => new Promise((resolve) => {
+    const image = new Image();
+    image.onload = () => resolve(source);
+    image.onerror = () => resolve(null);
+    image.src = source;
+  }))).then((loadedFrames) => {
+    frames = loadedFrames.filter(Boolean);
+    isReady = frames.length > 1;
+    startAnimation();
+  });
+
+  if ('IntersectionObserver' in window) {
+    const heroObserver = new IntersectionObserver(([entry]) => {
+      isVisible = entry.isIntersecting;
+      if (isVisible) startAnimation();
+      else stopAnimation();
+    }, { threshold: 0.05 });
+
+    heroObserver.observe(heroFrame);
+  }
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stopAnimation();
+    else startAnimation();
+  });
+}
+
 const interactiveBox = document.querySelector('.interactive-box');
 const whatLinks = document.querySelectorAll('a[href="#why"]');
 
