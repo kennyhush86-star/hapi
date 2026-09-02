@@ -96,11 +96,11 @@ button{font:inherit}
   .topbar{height:56px}
   .nav{gap:14px}
   .nav a{font-size:17px}
-  .hero{min-height:calc(100svh - 25px);padding:140px 20px 34px;justify-content:flex-start}
+  .hero{min-height:100svh;padding:140px 20px 34px;justify-content:flex-start}
   .hero h1{font-size:11vw}
   .actions{margin-top:44px}
   .hero-art{min-height:285px;margin-top:4px}
-  .hero-img{width:min(305px,84vw);transform:translateY(34px)}
+  .hero-img{width:min(305px,84vw);transform:translateY(44px)}
   .btn{padding:12px 18px;font-size:18px}
   .section{padding:95px 7vw}
   #why{scroll-margin-top:51px}
