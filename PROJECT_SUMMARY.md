@@ -20,6 +20,8 @@ Current visual direction:
 ```text
 Hapi Website/
 |-- index.html
+|-- favicon.png
+|-- apple-touch-icon.png
 |-- css/
 |   `-- style.css
 |-- js/
@@ -177,7 +179,7 @@ Jalan Sungai Maong Tengah,
 The latest source update includes:
 
 - Added `public/images/favicon.png` as the browser favicon.
-- Added the favicon as an Apple touch icon for iPhone bookmarks and Home Screen shortcuts.
+- Added root-level, cache-busted favicon and Apple touch icon declarations for stronger mobile Safari compatibility.
 - Changed the browser title to `Hapi Charcoal Briquettes`.
 - Changed the hero CTA to `What's This?`.
 - Removed the dotted black-background texture and changed the main background to pure black.
