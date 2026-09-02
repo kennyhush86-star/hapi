@@ -119,7 +119,7 @@ button{font:inherit}
   .feature-followup{font-size:18px}
   .mobile-break{display:initial}
   .desktop-break{display:none}
-  .where-copy{margin-inline:auto;font-size:18px}
+  .where-copy{align-self:center;width:calc(100vw - 8px);max-width:none;margin-inline:0;font-size:18px}
   .where-copy p{white-space:normal}
   .where-family{width:min(560px,88vw);margin-top:54px}
   .manifesto{min-height:calc(100svh - 76px);padding:70px 7vw 95px}
