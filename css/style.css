@@ -114,7 +114,7 @@ button{font:inherit}
   .product-stage{padding:70px 7vw 95px}
   #product{scroll-margin-top:76px}
   .feature-list{font-size:44px}
-  .product-stage .section-copy{font-size:18px}
+  .product-stage .section-copy{margin-right:auto;margin-left:auto;font-size:18px}
   .product-stage .section-copy p:first-child{white-space:normal}
   .feature-followup{font-size:18px}
   .mobile-break{display:initial}
