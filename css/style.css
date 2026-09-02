@@ -96,7 +96,7 @@ button{font:inherit}
   .topbar{height:56px}
   .logo img{height:40px}
   .nav{gap:14px}
-  .nav a{font-size:17px}
+  .nav a{font-size:15px}
   .hero{min-height:100svh;padding:140px 20px 34px;justify-content:flex-start}
   .hero h1{font-size:11vw}
   .actions{margin-top:44px}
@@ -122,19 +122,19 @@ button{font:inherit}
   #story{scroll-margin-top:76px}
   .site-footer{padding:40px 7vw 30px;scroll-margin-top:84px}
   .footer-layout{grid-template-columns:1fr;gap:44px}
-  .footer-main{align-items:flex-start;flex-direction:column;gap:22px}
+  .footer-main{align-items:flex-start;flex-direction:column;gap:14px}
   .footer-logo img{height:48px}
-  .footer-address{font-size:17px;text-align:left}
+  .footer-address{font-size:15px;text-align:left}
   .footer-meta{font-size:15px}
   .footer-contact{min-width:0;align-self:auto;gap:28px;justify-content:flex-start;order:-1}
-  .footer-contact h2{font-size:17px}
+  .footer-contact h2{font-size:15px}
 }
 
 @media (max-width:420px){
   .topbar{top:12px;width:calc(100% - 20px);padding:8px 12px 8px 16px}
   .logo img{height:36px}
   .nav{gap:11px}
-  .nav a{font-size:16px}
+  .nav a{font-size:15px}
   .nav-cta{padding:11px 16px}
   .hero{padding-inline:16px}
   #why{scroll-margin-top:41px}
