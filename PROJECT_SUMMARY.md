@@ -1,193 +1,175 @@
 # Hapi Website Summary
 
+Last updated: 2 September 2026
+
 ## Project
 
 Hapi is a responsive charcoal briquette website for a young, playful, premium BBQ lifestyle brand.
 
-Current visual direction:
-
-- Black and white as the main palette
+- Pure black and warm white backgrounds
 - Hapi red accent: `#ff002b`
-- Changa One for large display headlines
-- Lilita One at regular weight for navigation, buttons, and section descriptions
-- Inter as the base fallback/body font
-- Hapi mascot and product packaging remain the main visual assets
-- No color gradients, floating hero animation, decorative icons, or card-heavy layout
-- The background is pure black (`#000`) with no dotted texture or pattern
+- Changa One for display headlines and feature statements
+- Lilita One for navigation, buttons, descriptions, and footer copy
+- Hapi mascot and packaging artwork remain the main visual assets
+- No gradients, dotted background, floating hero animation, or card-heavy layout
 
-## File Structure
+## Structure
 
 ```text
 Hapi Website/
 |-- index.html
 |-- favicon.png
 |-- apple-touch-icon.png
+|-- robots.txt
+|-- sitemap.xml
 |-- css/
 |   `-- style.css
 |-- js/
 |   `-- main.js
-|-- public/
-|   `-- images/
-|       |-- facebook.svg
-|       |-- favicon.png
-|       |-- flaps.png
-|       |-- hapi_family.svg
-|       |-- hero.svg
-|       |-- instagram.svg
-|       |-- logo.svg
-|       |-- product.png
-|       `-- whatsapp.svg
+|-- public/images/
+|   |-- hero.svg
+|   |-- logo.svg
+|   |-- product.png
+|   |-- product-680.webp
+|   |-- product-1020.webp
+|   |-- product-1240.webp
+|   |-- flaps.png
+|   |-- flaps-680.webp
+|   |-- flaps-1020.webp
+|   |-- flaps-1240.webp
+|   |-- hapi_family.svg
+|   |-- shopee.svg
+|   |-- grab.svg
+|   |-- whatsapp.svg
+|   |-- facebook.svg
+|   |-- instagram.svg
+|   `-- favicon.png
 |-- .gitignore
 `-- PROJECT_SUMMARY.md
 ```
 
-## Header
+## Current Page
 
-- Logo links to `#top` and scrolls to the hero without refreshing the page.
-- Menu links: `About`, `Contact`, and `Buy Now`.
-- About anchors to WHAT?.
-- Contact smoothly scrolls to the absolute bottom of the footer in one click.
-- Buy Now anchors to the footer.
-- The fixed white pill header uses Lilita One at regular weight.
-- Below `780px`, About and Contact are hidden while Buy Now remains visible.
+### Header
 
-## Hero
+- Fixed white pill header
+- Hapi logo scrolls to the top without refreshing
+- `Contact` and `Buy Now` both scroll smoothly to the absolute bottom of the footer
+- Mobile header text is `18px`; footer text is `15px`
+
+### Hero
 
 - Headline: `OUR CHARCOAL / LOVED BY US FIRE`
-- `US` is crossed out with a red correction line.
-- `FIRE` is red.
-- CTA: `What's This?`
+- `US` is crossed out and `FIRE` uses Hapi red
+- `What's This?` scrolls to the WHAT? section
 - Main artwork: `public/images/hero.svg`
-- The CTA anchors to the WHAT? section.
 
-## WHAT? Section
+### WHAT?
 
-- Black background with centered white content.
-- Uses `product.png` as the closed box and overlays `flaps.png` when open.
-- The box rises into position and opens automatically when reached.
-- The opening sequence plays only once per page load.
-- Clicking the header, hero CTA, or logo does not restart it.
-- The box remains directly clickable for opening and closing.
-- Description:
+- Black background with centered white content
+- Closed box uses `product.png`; open flaps overlay uses `flaps.png`
+- Responsive lossless WebP versions are selected automatically for faster loading
+- The box rises and opens once per page refresh, and remains directly clickable
+- Mobile description:
 
 ```text
-It's charcoal. Nothing fancy. Just charcoal. We make it.
-Put it in a box. You set it on fire. That's basically it.
-Well... ours is a little different.
+It's charcoal. Nothing fancy. Just charcoal.
+We make it. Put it in a box. You set it on fire.
+That's basically it. Well... ours is a little different.
 ```
 
-## WHY? Section
+### WHY?
 
-- White background with black heading and description.
-- Description:
+- White background with black copy
+- Mobile description:
 
 ```text
 Fire loves our charcoal. A lot. Good for fire.
-More importantly, you'll love it too, because our charcoal is:
+More importantly, you'll love it too,
+because our charcoal is:
 ```
 
-- Five red Changa One features animate upward one by one when the section passes its anchor:
+- Five red Changa One features reveal once as the user scrolls:
   - High Heat
   - Low Smoke
   - Long Lasting
   - Eco - Friendly
   - 100% Natural
-- The animation plays once and does not intercept, pause, lock, or alter normal scrolling.
-- After the features finish, this Lilita One follow-up appears:
+- The animation does not lock or intercept scrolling
 
-```text
-Don't believe it? Buy the chicken wings. Buy the sausages.
-Invite everyone over. Then remember none of this works
-very well without our charcoal. Know where to get it?
-```
+### WHERE?
 
-## WHERE? Section
+- Black background with centered white copy
+- Mobile description uses six intentional lines
+- `Shopee` and `Grab` are red, underlined links on mobile and desktop
+- `hapi_family.svg` appears beneath the description
 
-- Black background with centered white content.
-- Description:
+### Footer
 
-```text
-We make the boring black stuff that goes under the grill in Kuching, Sarawak.
-You make all the delicious stuff on top. Teamwork. Need some?
-Get it from selected supermarkets, minimarts, hardware stores, Shopee and Grab.
-```
+- White background matching the WHY? section
+- Left side: Hapi logo, company address, and `© 2026 Hapi`
+- Right side: Buy Now, Contact, and Follow Us groups
+- Shopee and Grab logos link to their official Malaysian websites
+- WhatsApp links to `+60122924104`
+- Facebook and Instagram icons are visual only until Hapi profile URLs are supplied
+- On mobile, the action groups appear above the logo and address
 
-- `public/images/hapi_family.svg` appears below the description.
+## Typography And Responsive Rules
 
-## Footer
+- Desktop section descriptions: `22px`
+- Mobile section descriptions: `18px`
+- Description line height: `34px`
+- Mobile header links: `18px`
+- Mobile footer text: `15px`
+- Main breakpoint: `780px`
+- Small-phone breakpoint: `420px`
+- Mobile-specific line breaks preserve the approved copy layout
+- `prefers-reduced-motion` removes smooth scrolling and reveal transitions where appropriate
 
-- Full-width white background matching the WHY? section.
-- Static Hapi logo.
-- Company details:
+## Production Work
 
-```text
-Hapi Industries Sdn. Bhd. (1680698-P)
-Ground Floor, Lot 1035,
-Jalan Sungai Maong Tengah,
-93150 Kuching, Sarawak
-```
+- Added explicit image dimensions to reduce layout shifts
+- Added high-priority hero loading
+- Added responsive lossless WebP packaging images
+- Added meta description, canonical URL, Open Graph metadata, and theme color
+- Added a valid `robots.txt` and `sitemap.xml`
+- Added a dedicated `180x180` Apple touch icon
+- Removed unused CSS and the unused Inter font request
 
-- Copyright: `© 2026 Hapi`.
-- The address and copyright sit below the logo in one left-aligned column.
-- The right column contains a WhatsApp link to `+60122924104` and Facebook/Instagram icons.
+## Audit Results
 
-## Typography And Spacing
+The final build was tested at `320px`, `390px`, `768px`, and `1440px`.
 
-- Headlines use Changa One at weight `400`.
-- Lilita One text is regular weight; no `<strong>` elements remain.
-- WHAT?, WHY?, WHERE?, and feature follow-up descriptions use `22px` on desktop and `20px` below `780px`.
-- All Lilita One description lines use an exact `34px` line height.
-- There is no additional margin between description paragraphs.
-- WHAT?, WHY?, and WHERE? use matching `48px` spacing after their headings.
-- The WHY? feature list has matching `48px` spacing above and below.
+- No broken images or failed local requests
+- No browser console or JavaScript errors
+- No horizontal overflow
+- No duplicate IDs
+- Navigation anchors and bottom scrolling work
+- Box and feature animations work as intended
+- HTML validation passes
+- Accessibility audit: `100`
+- Best Practices: `100`
+- SEO on the production hostname: `100`
+- Mobile Lighthouse Performance: `89`
+- Total Blocking Time: `0ms`
+- Cumulative Layout Shift: `0`
 
-## Responsive And Motion Behavior
+## Editing Locations
 
-- Main breakpoint: `780px`.
-- Small-phone adjustments: `420px`.
-- Hero, mascot, packaging, headings, feature text, and spacing scale for mobile.
-- Fixed-header anchor offsets are defined for desktop and mobile.
-- WHAT?, WHY?, and WHERE? anchors were measured at matching positions: about `140px` on desktop and `136px` on tested mobile widths.
-- Verified viewport widths have no horizontal overflow at `1440px`, `390px`, or `320px`.
-- The `320px` footer uses smaller address text so the company registration number stays on one line.
-- `prefers-reduced-motion` disables smooth scrolling and animated transitions where applicable.
-- The previous sticky/scrollytelling layout has been fully removed.
-
-## Main Editing Locations
-
-- Content and wording: `index.html`
-- Colors, spacing, typography, layout, and responsive rules: `css/style.css`
-- Box and feature reveal behavior: `js/main.js`
-- Hero mascot: `public/images/hero.svg`
-- Header logo: `public/images/logo.svg`
-- WHERE? family artwork: `public/images/hapi_family.svg`
-- Closed product box: `public/images/product.png`
-- Open box flaps overlay: `public/images/flaps.png`
-- Browser favicon: `public/images/favicon.png`
+- Content and metadata: `index.html`
+- Layout, typography, colors, and responsive rules: `css/style.css`
+- Box, feature reveal, and bottom-scroll behavior: `js/main.js`
+- Visual assets: `public/images/`
 
 ## Repository And Deployment
 
-- GitHub repository: `https://github.com/kennyhush86-star/hapi`
+- GitHub: `https://github.com/kennyhush86-star/hapi`
 - Branch: `main`
-- Live Cloudflare Pages site: `https://hapi.pages.dev`
-- Latest deployed commit: `b1c5e5b Smooth scroll to contact footer`
-- The obsolete `hapi-charcoal` Cloudflare project was deleted.
-- Cloudflare currently uses direct upload; local changes do not deploy automatically.
+- Live site: `https://hapi.pages.dev`
+- Cloudflare Pages project: `hapi`
+- Deployment uses Wrangler direct upload; pushing to GitHub alone does not update Cloudflare
 
-## Latest GitHub Update
+## Pending Links
 
-The latest source update includes:
-
-- Added `public/images/favicon.png` as the browser favicon.
-- Added root-level, cache-busted favicon and Apple touch icon declarations for stronger mobile Safari compatibility.
-- Changed the browser title to `Hapi Charcoal Briquettes`.
-- Changed the hero CTA to `What's This?`.
-- Removed the dotted black-background texture and changed the main background to pure black.
-
-These changes still require a separate Cloudflare direct upload before they appear on the live site.
-
-## Current Limitations / Next Steps
-
-- `Buy Now` points to the footer, but direct purchasing links are not implemented yet.
-- The WHERE? section lists retail channels but does not yet link to store locations, Shopee, or Grab.
-- Chrome viewport checks are complete; a final physical-device and cross-browser review is still recommended before launch.
+- Replace the general Shopee and Grab website URLs with Hapi's direct store/product URLs when available
+- Add Hapi Facebook and Instagram profile URLs before making those footer icons clickable
