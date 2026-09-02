@@ -65,6 +65,7 @@ button{font:inherit}
 .feature-list.is-reveal-ready li:nth-child(even){transform:translateY(40px) scale(.72) rotate(2deg)}
 .feature-list.is-reveal-ready li.is-visible{opacity:1;transform:translateY(0)}
 .feature-followup{margin:48px 0 0;font-family:'Lilita One',sans-serif;font-size:22px;line-height:34px}
+.mobile-break{display:none}
 .feature-list.is-reveal-ready + .feature-followup{opacity:0;transform:translateY(20px);transition:opacity .3s ease,transform .55s cubic-bezier(.16,1,.3,1)}
 .feature-list.is-reveal-complete + .feature-followup{opacity:1;transform:translateY(0)}
 
@@ -116,6 +117,8 @@ button{font:inherit}
   .product-stage .section-copy{font-size:18px}
   .product-stage .section-copy p:first-child{white-space:normal}
   .feature-followup{font-size:18px}
+  .mobile-break{display:initial}
+  .desktop-break{display:none}
   .where-copy{margin-inline:auto;font-size:18px}
   .where-copy p{white-space:normal}
   .where-family{width:min(560px,88vw);margin-top:54px}
