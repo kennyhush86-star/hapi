@@ -17,7 +17,10 @@
 <div class="site" id="top">
   <header class="topbar">
     <a class="logo" href="#top" aria-label="Back to top"><img src="public/images/logo.svg" alt="Hapi"></a>
-    <nav class="nav"><a href="#why">About</a><a href="#page-end">Contact</a><a href="#buy" class="nav-cta">Buy Now</a></nav>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#page-end">Contact</a>
+      <a href="#page-end" class="nav-cta">Buy Now</a>
+    </nav>
   </header>
 
   <main>
@@ -91,21 +94,27 @@
         </div>
 
         <div class="footer-contact">
-          <h2>Contact</h2>
-          <div class="footer-icons" aria-label="Contact options">
-            <a class="footer-icon" href="https://wa.me/60122924104" target="_blank" rel="noopener noreferrer" aria-label="Contact Hapi on WhatsApp" title="WhatsApp">
-              <img src="public/images/whatsapp.svg" alt="">
-            </a>
+          <div class="footer-action">
+            <h2>Buy Now</h2>
+            <div class="footer-icons" aria-label="Shopping platforms">
+              <span class="footer-icon" title="Shopee"><img src="public/images/shopee.svg" alt="Shopee"></span>
+              <span class="footer-icon footer-icon-grab" title="Grab"><img src="public/images/grab.svg" alt="Grab"></span>
+            </div>
           </div>
 
-          <h3>Follow Us</h3>
-          <div class="footer-icons" aria-label="Social media">
-            <span class="footer-icon" title="Facebook">
-              <img src="public/images/facebook.svg" alt="Facebook">
-            </span>
-            <span class="footer-icon" title="Instagram">
-              <img src="public/images/instagram.svg" alt="Instagram">
-            </span>
+          <div class="footer-action">
+            <h2>Contact</h2>
+            <div class="footer-icons" aria-label="Contact options">
+              <a class="footer-icon" href="https://wa.me/60122924104" target="_blank" rel="noopener noreferrer" aria-label="Contact Hapi on WhatsApp" title="WhatsApp"><img src="public/images/whatsapp.svg" alt=""></a>
+            </div>
+          </div>
+
+          <div class="footer-action">
+            <h2>Follow Us</h2>
+            <div class="footer-icons" aria-label="Social media">
+              <span class="footer-icon" title="Facebook"><img src="public/images/facebook.svg" alt="Facebook"></span>
+              <span class="footer-icon" title="Instagram"><img src="public/images/instagram.svg" alt="Instagram"></span>
+            </div>
           </div>
         </div>
       </div>

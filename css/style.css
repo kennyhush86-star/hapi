@@ -18,7 +18,7 @@ button{font:inherit}
 .topbar{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 32px));height:62px;background:var(--white);color:#090909;border-radius:999px;display:flex;align-items:center;justify-content:space-between;padding:8px 14px 8px 22px;z-index:50;box-shadow:0 18px 60px rgba(0,0,0,.35)}
 .logo{display:flex;align-items:center}
 .logo img{display:block;width:auto;height:46px}
-.nav{display:flex;gap:26px;align-items:center;font-family:'Lilita One',sans-serif}
+.nav{display:flex;gap:20px;align-items:center;font-family:'Lilita One',sans-serif}
 .nav a{font-size:18px;font-weight:400}
 .nav a:hover{opacity:.6}
 .nav-cta{background:#090909;color:var(--white);padding:12px 18px;border-radius:999px}
@@ -82,21 +82,22 @@ button{font:inherit}
 .footer-address{font-style:normal;font-size:18px;line-height:1.55;text-align:left}
 .footer-meta{font-size:16px}
 .footer-meta p{margin:0}
-.footer-contact{min-width:190px}
-.footer-contact h2{margin:0 0 18px;font-family:'Changa One',sans-serif;font-size:18px;font-weight:400;line-height:1}
-.footer-contact h3{margin:30px 0 16px;font-size:18px;font-weight:400;line-height:1}
+.footer-contact{min-width:190px;align-self:stretch;display:flex;flex-direction:column;justify-content:space-between}
+.footer-contact h2{margin:0 0 12px;font-family:'Changa One',sans-serif;font-size:18px;font-weight:400;line-height:1}
 .footer-icons{display:flex;align-items:center;gap:18px}
-.footer-icon{display:inline-grid;width:34px;height:34px;place-items:center}
-.footer-icon img{display:block;width:30px;height:30px;object-fit:contain}
+.footer-icon{display:inline-grid;width:30px;height:30px;place-items:center}
+.footer-icon img{display:block;width:27px;height:27px;object-fit:contain;filter:brightness(0)}
+.footer-icon-grab{width:49px;height:30px;align-self:center}
+.footer-icon-grab img{width:45px;height:45px;transform:translateY(-6px)}
 .footer-icon[href]:hover{opacity:.55}
 .footer-icon[href]:focus-visible{outline:3px solid var(--red);outline-offset:5px}
 
 @media (max-width:780px){
-  .nav a:not(.nav-cta){display:none}
   .topbar{height:56px}
-  .hero{padding:90px 20px 34px}
+  .nav{gap:14px}
+  .nav a{font-size:17px}
+  .hero{padding:120px 20px 34px;justify-content:flex-start}
   .hero h1{font-size:11vw}
-  .hero h1 .corrected-line{font-size:.82em}
   .hero-art{min-height:285px;margin-top:4px}
   .hero-img{width:min(270px,74vw);transform:translateY(-4px)}
   .btn{padding:12px 18px;font-size:18px}
@@ -123,13 +124,15 @@ button{font:inherit}
   .footer-logo img{height:56px}
   .footer-address{font-size:17px;text-align:left}
   .footer-meta{font-size:15px}
-  .footer-contact{min-width:0}
-  .footer-contact h2,.footer-contact h3{font-size:17px}
+  .footer-contact{min-width:0;align-self:auto;gap:28px;justify-content:flex-start}
+  .footer-contact h2{font-size:17px}
 }
 
 @media (max-width:420px){
-  .topbar{top:12px;width:calc(100% - 20px);padding-left:16px}
+  .topbar{top:12px;width:calc(100% - 20px);padding:8px 12px 8px 16px}
   .logo img{height:40px}
+  .nav{gap:11px}
+  .nav a{font-size:16px}
   .nav-cta{padding:11px 16px}
   .hero{padding-inline:16px}
   #why{scroll-margin-top:41px}
@@ -137,7 +140,7 @@ button{font:inherit}
   .feature-list{font-size:34px}
   .manifesto{min-height:calc(100svh - 76px);padding:60px 7vw 80px}
   .footer-address{font-size:15px}
-  .footer-contact h2,.footer-contact h3{font-size:15px}
+  .footer-contact h2{font-size:15px}
 }
 
 @media (prefers-reduced-motion:reduce){
