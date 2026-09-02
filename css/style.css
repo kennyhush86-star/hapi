@@ -96,7 +96,7 @@ button{font:inherit}
   .topbar{height:56px}
   .logo img{height:40px}
   .nav{gap:14px}
-  .nav a{font-size:15px}
+  .nav a{font-size:18px}
   .hero{min-height:100svh;padding:140px 20px 34px;justify-content:flex-start}
   .hero h1{font-size:11vw}
   .actions{margin-top:44px}
@@ -108,14 +108,14 @@ button{font:inherit}
   .question-heading{font-size:11vw}
   .section-copy{margin-left:0}
   .interactive-box{width:min(500px,82vw);margin-top:48px}
-  .box-reveal-copy{font-size:20px}
+  .box-reveal-copy{font-size:18px}
   .product-stage{padding:70px 7vw 95px}
   #product{scroll-margin-top:76px}
   .feature-list{font-size:44px}
-  .product-stage .section-copy{font-size:20px}
+  .product-stage .section-copy{font-size:18px}
   .product-stage .section-copy p:first-child{white-space:normal}
-  .feature-followup{font-size:20px}
-  .where-copy{margin-inline:auto;font-size:20px}
+  .feature-followup{font-size:18px}
+  .where-copy{margin-inline:auto;font-size:18px}
   .where-copy p{white-space:normal}
   .where-family{width:min(560px,88vw);margin-top:54px}
   .manifesto{min-height:calc(100svh - 76px);padding:70px 7vw 95px}
@@ -134,7 +134,7 @@ button{font:inherit}
   .topbar{top:12px;width:calc(100% - 20px);padding:8px 12px 8px 16px}
   .logo img{height:36px}
   .nav{gap:11px}
-  .nav a{font-size:15px}
+  .nav a{font-size:18px}
   .nav-cta{padding:11px 16px}
   .hero{padding-inline:16px}
   #why{scroll-margin-top:41px}
