@@ -177,6 +177,7 @@ Jalan Sungai Maong Tengah,
 The latest source update includes:
 
 - Added `public/images/favicon.png` as the browser favicon.
+- Added the favicon as an Apple touch icon for iPhone bookmarks and Home Screen shortcuts.
 - Changed the browser title to `Hapi Charcoal Briquettes`.
 - Changed the hero CTA to `What's This?`.
 - Removed the dotted black-background texture and changed the main background to pure black.
