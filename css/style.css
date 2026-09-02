@@ -108,7 +108,8 @@ button{font:inherit}
   .question-heading{font-size:11vw}
   .section-copy{margin-left:0}
   .interactive-box{width:min(500px,82vw);margin-top:48px}
-  .box-reveal-copy{font-size:18px}
+  .box-reveal-copy{width:calc(100vw - 8px);max-width:none;font-size:18px}
+  .box-reveal-copy span{display:block}
   .product-stage{padding:70px 7vw 95px}
   #product{scroll-margin-top:76px}
   .feature-list{font-size:44px}
@@ -128,6 +129,10 @@ button{font:inherit}
   .footer-meta{font-size:15px}
   .footer-contact{min-width:0;align-self:auto;gap:28px;justify-content:flex-start;order:-1}
   .footer-contact h2{font-size:15px}
+}
+
+@media (min-width:390px) and (max-width:780px){
+  .box-reveal-copy span{white-space:nowrap}
 }
 
 @media (max-width:420px){
