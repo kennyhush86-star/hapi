@@ -65,10 +65,10 @@ Hapi Website/
 - Headline: `OUR CHARCOAL / LOVED BY US FIRE`
 - `US` is crossed out and `FIRE` uses Hapi red
 - `What's This?` scrolls to the WHAT? section
-- Main artwork uses 10 numbered frames from `public/images/animate/`
-- Optimized `900x900` WebP frames are displayed instead of loading the larger source PNGs
-- Frames play in numerical order at about 7 FPS and loop while the hero is visible
-- Playback pauses when the hero is off-screen or the browser tab is hidden
+- Main artwork uses 10 numbered source frames from `public/images/animate/`
+- The frames are combined into one optimized `768x7680` WebP sprite instead of loading 10 large PNGs
+- A browser-native CSS step animation plays the frames at about 7 FPS and loops continuously
+- Header and hero navigation cannot interrupt or pause the animation loop
 - Visitors who prefer reduced motion see the first frame as a static image
 - The original `public/images/hero.svg` remains in the asset folder
 
@@ -138,7 +138,7 @@ because our charcoal is:
 
 - Added explicit image dimensions to reduce layout shifts
 - Added high-priority hero loading
-- Added an optimized, visibility-aware frame-by-frame hero animation
+- Added an optimized single-file CSS sprite animation for smooth, reliable looping
 - Added responsive lossless WebP packaging images
 - Added meta description, canonical URL, Open Graph metadata, and theme color
 - Added a valid `robots.txt` and `sitemap.xml`
@@ -167,7 +167,8 @@ The final build was tested at `320px`, `390px`, `768px`, and `1440px`.
 
 - Content and metadata: `index.html`
 - Layout, typography, colors, and responsive rules: `css/style.css`
-- Hero animation, box reveal, feature reveal, and bottom-scroll behavior: `js/main.js`
+- Hero animation styling: `css/style.css`
+- Box reveal, feature reveal, and bottom-scroll behavior: `js/main.js`
 - Visual assets: `public/images/`
 
 ## Repository And Deployment
